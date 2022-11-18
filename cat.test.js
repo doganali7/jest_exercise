@@ -1,31 +1,31 @@
 const Cat = require("./cat");
 
-var myCat = new Cat("Oliver", 5);
-var herCat = new Cat("Milo", 3);
+let myCat = new Cat("Oliver", 5);
+let herCat = new Cat("Milo", 3);
 
 // Group tests
 describe("Cat", () => {
-  test("The same cat - toBe:", () => {
+  it("The same cat - toBe:", () => {
     expect(myCat).toBe(myCat);
   });
 
-  test("Same cat - toEqual:", () => {
+  it("Same cat - toEqual:", () => {
     expect(myCat).toEqual(myCat);
   });
 
-  test("Two different cats with different data - toBe:", () => {
+  it("Two different cats with different data - toBe:", () => {
     expect(herCat).toBe(myCat);
   });
 
-  test("Two different cats with different data - toEqual:", () => {
+  it("Two different cats with different data - toEqual:", () => {
     expect(herCat).toEqual(myCat);
   });
 
-  test("Two different cats with the same data - toBe:", () => {
+  it("Two different cats with the same data - toBe:", () => {
     expect({ name: "Oliver", age: 5 }).toBe(myCat);
   });
 
-  test("Two different cats with the same data - toEqual:", () => {
+  it("Two different cats with the same data - toEqual:", () => {
     expect({ name: "Oliver", age: 5 }).toEqual(myCat);
   });
 });
